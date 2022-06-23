@@ -1,0 +1,21 @@
+.nav-link-container {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 20px;
+
+  .logo-container {
+    padding: 10px 30px;
+  }
+
+  .links-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    cursor: pointer;
+    padding: 20px;
+  }
+}
