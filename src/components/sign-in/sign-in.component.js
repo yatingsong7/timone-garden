@@ -6,6 +6,7 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase.utils";
 import FormInput from "../form-input/form-input.component";
+import "./sign-in.style.scss";
 
 const initFormFields = {
   email: "",
@@ -68,7 +69,7 @@ const SignIn = () => {
   };
 
   return (
-    <div>
+    <div className="sign-in-container">
       <h1>Sign in</h1>
       <FormInput
         label="Email"

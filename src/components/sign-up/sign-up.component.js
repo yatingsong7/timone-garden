@@ -3,6 +3,7 @@ import { UserContext } from "../../context/user.context";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase.utils";
 import { createUserDocumentFromAuth } from "../../utils/firebase.utils";
 import FormInput from "../form-input/form-input.component";
+import "./sign-up.style.scss";
 
 const initFormFields = {
   firstname: "",
@@ -53,7 +54,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="sign-up-container">
       <h1>Sign up a new account</h1>
       <form onSubmit={handleSubmit}>
         <FormInput
