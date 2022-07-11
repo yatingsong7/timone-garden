@@ -1,11 +1,13 @@
 .form-input-group {
   .form-label {
     display: block;
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
   }
 
   .form-input {
     border: 0;
     border-bottom: 1px black solid;
+    height: 50px;
+    width: 300px;
   }
 }
