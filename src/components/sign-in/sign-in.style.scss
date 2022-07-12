@@ -2,15 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 600px;
 
   .button-group {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin-top: 20px;
 
     Button {
       margin-bottom: 10px;
     }
+  }
+
+  i {
+    text-decoration: underline;
+    color: green;
   }
 }

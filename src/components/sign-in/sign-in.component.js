@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../../context/user.context";
+import { Link } from "react-router-dom";
 import {
   signInWithGooglePopup,
   signInUserWithEmailAndPassword,
@@ -72,31 +73,38 @@ const SignIn = () => {
   return (
     <div className="sign-in-container">
       <h1>Sign in</h1>
-
-      <FormInput
-        label="Email"
-        type="email"
-        name="email"
-        onChange={handleChange}
-        value={email}
-        required
-      />
-      <FormInput
-        label="Password"
-        type="password"
-        name="password"
-        onChange={handleChange}
-        value={password}
-        required
-      />
-      <div className="button-group">
-        <Button onClick={handleSubmit} buttonType="default">
-          Sign in
-        </Button>
-        <Button onClick={signInWithGoogle} buttonType="google">
-          Sign in with Google Account
-        </Button>
-      </div>
+      <form>
+        <FormInput
+          label="Email"
+          type="email"
+          name="email"
+          onChange={handleChange}
+          value={email}
+          required
+        />
+        <FormInput
+          label="Password"
+          type="password"
+          name="password"
+          onChange={handleChange}
+          value={password}
+          required
+        />
+        <div className="button-group">
+          <Button onClick={handleSubmit} buttonType="default">
+            Sign in
+          </Button>
+          <Button onClick={signInWithGoogle} buttonType="google">
+            Sign in with Google Account
+          </Button>
+        </div>
+      </form>
+      <small>
+        Don't have an account?{" "}
+        <Link to="/signup">
+          <i>Create one!</i>
+        </Link>
+      </small>
     </div>
   );
 };
