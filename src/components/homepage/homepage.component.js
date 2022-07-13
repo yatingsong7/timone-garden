@@ -1,5 +1,4 @@
 import "../../App.css";
-import { Outlet } from "react-router-dom";
 import Directory from "../directory/directory.component";
 
 const Homepage = () => {
@@ -38,7 +37,6 @@ const Homepage = () => {
 
   return (
     <div>
-      <Outlet />
       <Directory category={category} />
     </div>
   );
