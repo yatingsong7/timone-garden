@@ -1,10 +1,8 @@
-import { useContext, useState } from "react";
-import { UserContext } from "../../context/user.context";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   signInWithGooglePopup,
   signInUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
 } from "../../utils/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import "./sign-in.style.scss";
@@ -19,13 +17,10 @@ const SignIn = () => {
   const [formFields, setFormFields] = useState(initFormFields);
   const { email, password } = formFields;
 
-  const { setCurrentUser } = useContext(UserContext);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const { user } = await signInUserWithEmailAndPassword(email, password);
-      setCurrentUser(user);
+      await signInUserWithEmailAndPassword(email, password);
       resetForm();
     } catch (error) {
       switch (error.code) {
@@ -52,9 +47,7 @@ const SignIn = () => {
 
   const signInWithGoogle = async () => {
     try {
-      const { user } = await signInWithGooglePopup();
-      await createUserDocumentFromAuth(user);
-      setCurrentUser(user);
+      await signInWithGooglePopup();
       resetForm();
     } catch (error) {
       switch (error.code) {
@@ -91,10 +84,10 @@ const SignIn = () => {
           required
         />
         <div className="button-group">
-          <Button onClick={handleSubmit} buttonType="default">
+          <Button onClick={handleSubmit} buttonType="default" type="submit">
             Sign in
           </Button>
-          <Button onClick={signInWithGoogle} buttonType="google">
+          <Button onClick={signInWithGoogle} buttonType="google" type="button">
             Sign in with Google Account
           </Button>
         </div>
