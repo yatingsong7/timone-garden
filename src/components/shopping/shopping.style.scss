@@ -1,0 +1,19 @@
+.shopping-item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  text-align: center;
+  margin: 10px;
+  flex: 1 0 21%;
+
+  img {
+    width: 250px;
+    height: 300px;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+}
