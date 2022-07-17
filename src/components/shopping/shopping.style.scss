@@ -1,19 +1,8 @@
 .shopping-item-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item-card {
-  text-align: center;
-  margin: 10px;
-  flex: 1 0 21%;
-
-  img {
-    width: 250px;
-    height: 300px;
-  }
-
-  img:hover {
-    cursor: pointer;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 20px auto;
+  max-width: 1060px;
 }
