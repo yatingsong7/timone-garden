@@ -1,0 +1,17 @@
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+
+  .cart-item-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item-description {
+    padding-left: 10px;
+  }
+
+  .cart-item-name {
+    font-weight: bold;
+  }
+}

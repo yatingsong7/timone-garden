@@ -4,11 +4,13 @@ import { ReactComponent as Logo } from "../../assets/plant-flower-outline-svgrep
 import CartIcon from "../cart/cart-icon.component";
 import CartDropDown from "../cart/cart-dropdown.component";
 import { UserContext } from "../../context/user.context";
+import { CartContext } from "../../context/cart.context";
 import "./navigation.style.scss";
 import { signOutUser } from "../../utils/firebase.utils";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { cartToggle } = useContext(CartContext);
 
   return (
     <Fragment>
@@ -35,11 +37,11 @@ const Navigation = () => {
               Sign In
             </Link>
           )}
-          <Link className="nav-link" to="/aboutus">
+          <span className="nav-link">
             <CartIcon />
-          </Link>
+          </span>
         </div>
-        <CartDropDown />
+        {cartToggle && <CartDropDown />}
       </div>
     </Fragment>
   );
