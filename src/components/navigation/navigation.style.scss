@@ -3,10 +3,7 @@
   justify-content: space-between;
   height: 70px;
   margin-bottom: 20px;
-
-  .logo-container {
-    padding: 10px 30px;
-  }
+  position: relative;
 
   .links-container {
     display: flex;
@@ -17,11 +14,11 @@
   .nav-link {
     cursor: pointer;
     padding: 10px;
-    margin: 10px;
     font-weight: bold;
 
-    &.sign-in {
+    &.auth-button {
       border: 1px solid green;
+      padding: 10px;
 
       &:hover {
         background-color: green;
