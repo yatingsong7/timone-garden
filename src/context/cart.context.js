@@ -48,6 +48,12 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const clearItem = (productToRemove) => {
+    setCartItems(() => {
+      return cartItems.filter((item) => item.id !== productToRemove.id);
+    });
+  };
+
   useEffect(() => {
     setItemsTotal(() => {
       return cartItems.reduce((prev, current) => prev + current.quantity, 0);
@@ -61,6 +67,7 @@ export const CartProvider = ({ children }) => {
     addCartItems,
     itemsTotal,
     removeCartItems,
+    clearItem,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
