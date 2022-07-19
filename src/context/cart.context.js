@@ -6,6 +6,7 @@ export const CartContext = createContext({
   cartItems: [],
   addCartItems: () => {},
   itemsTotal: 0,
+  removeCartItems: () => {},
 });
 
 export const CartProvider = ({ children }) => {
@@ -29,6 +30,24 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const removeCartItems = (productToRemove) => {
+    setCartItems(() => {
+      const checkedItem = cartItems.find(
+        (item) => item.id === productToRemove.id
+      );
+
+      if (checkedItem.quantity === 1) {
+        return cartItems.filter((item) => item.id !== productToRemove.id);
+      }
+
+      return cartItems.map((item) =>
+        item.id === checkedItem.id
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      );
+    });
+  };
+
   useEffect(() => {
     setItemsTotal(() => {
       return cartItems.reduce((prev, current) => prev + current.quantity, 0);
@@ -41,6 +60,7 @@ export const CartProvider = ({ children }) => {
     cartItems,
     addCartItems,
     itemsTotal,
+    removeCartItems,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import AboutUs from "./components/aboutus/aboutus.component";
+import Checkout from "./components/checkout/checkout.component";
 import HeaderAndFooterWrapper from "./components/header-footer-wrapper/header-footer-wrapper.component";
 import Homepage from "./components/homepage/homepage.component";
 import Shopping from "./components/shopping/shopping.component";
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="aboutus" element={<AboutUs />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="checkout" element={<Checkout />} />
       </Route>
     </Routes>
   );
