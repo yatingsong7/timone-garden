@@ -1,7 +1,9 @@
+import "./footer.style.scss";
 const Footer = () => {
   return (
-    <div>
-      <p>Copyright@2022</p>
+    <div className="footer-container">
+      <h3 className="contact-us">Contact us</h3>
+      <p className="copyright">Copyright@2022</p>
     </div>
   );
 };
