@@ -8,10 +8,15 @@ const Shopping = () => {
 
   return (
     <div className="shopping-item-container">
-      {categories &&
-        categories.map((category) => {
-          return <Product key={category.id} product={category} />;
-        })}
+      {Object.keys(categories).map((category) => {
+        console.log(categories[category]);
+        return (
+          <Product
+            key={categories[category].id}
+            product={categories[category]}
+          />
+        );
+      })}
     </div>
   );
 };
