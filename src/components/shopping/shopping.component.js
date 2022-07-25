@@ -9,7 +9,6 @@ const Shopping = () => {
   return (
     <div className="shopping-item-container">
       {Object.keys(categories).map((category) => {
-        console.log(categories[category]);
         return (
           <Product
             key={categories[category].id}
