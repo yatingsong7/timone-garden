@@ -1,5 +1,6 @@
 import "../../App.css";
 import Directory from "../directory/directory.component";
+import CategoryPreview from "../category-preview/category-preview.component";
 
 const Homepage = () => {
   const category = [
@@ -43,6 +44,7 @@ const Homepage = () => {
   return (
     <div>
       <Directory category={category} />
+      <CategoryPreview />
     </div>
   );
 };
