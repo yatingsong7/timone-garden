@@ -23,8 +23,8 @@ const Products = ({ products }) => {
                 Add to Cart
               </Button>
             </div>
-            <div>{name}</div>
-            <div>${price}</div>
+            <div className="item-name">{name}</div>
+            <div className="item-price">${price}</div>
           </div>
         );
       })}
