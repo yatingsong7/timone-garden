@@ -1,0 +1,12 @@
+.nav-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  background-color: white;
+  top: 50px;
+
+  .dropdown-link {
+    padding: 10px;
+  }
+}

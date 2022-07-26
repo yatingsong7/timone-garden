@@ -17,6 +17,7 @@ export const CartProvider = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const addCartItems = (productToAdd) => {
+    console.log(productToAdd);
     setCartItems(() => {
       const checkedItem = cartItems.find((item) => item.id === productToAdd.id);
 

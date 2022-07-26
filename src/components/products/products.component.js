@@ -1,23 +1,23 @@
 import Button from "../button/button.component";
-import "./product.style.scss";
+import "./products.style.scss";
 import { CartContext } from "../../context/cart.context";
 import { useContext } from "react";
 
-const Product = ({ product }) => {
+const Products = ({ products }) => {
   const { addCartItems } = useContext(CartContext);
-  console.log(product);
+
   return (
-    <div className="item-card">
-      {product.map((pro) => {
-        const { imageUrl, name, price } = pro;
+    <>
+      {products.map((pro) => {
+        const { imageUrl, name, price, id } = pro;
         return (
-          <>
+          <div className="item-card" key={id}>
             <img src={imageUrl} alt={name} />
             <div className="add-to-cart-button">
               <Button
                 buttonType="default"
                 onClick={() => {
-                  addCartItems(product);
+                  addCartItems(pro);
                 }}
               >
                 Add to Cart
@@ -25,11 +25,11 @@ const Product = ({ product }) => {
             </div>
             <div>{name}</div>
             <div>${price}</div>
-          </>
+          </div>
         );
       })}
-    </div>
+    </>
   );
 };
 
-export default Product;
+export default Products;

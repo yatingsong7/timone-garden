@@ -1,11 +1,17 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ProductsContext } from "../../context/products.context";
+import Products from "../products/products.component";
+import "./category-items.style.scss";
 
-const CategoryItems = ({ products }) => {
+const CategoryItems = () => {
   const { title } = useParams();
+  const { categories } = useContext(ProductsContext);
+
   return (
-    <>
-      <h2>{title}</h2>
-    </>
+    <div className="products-container">
+      {categories[title] && <Products products={categories[title]} />}
+    </div>
   );
 };
 
