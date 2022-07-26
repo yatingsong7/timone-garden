@@ -14,8 +14,12 @@ const Navigation = () => {
   const { cartToggle } = useContext(CartContext);
   const [dropdownToggle, setDropdownToggle] = useState(false);
 
-  const handleDropdownToggle = () => {
-    setDropdownToggle(!dropdownToggle);
+  const mouseOn = () => {
+    setDropdownToggle(true);
+  };
+
+  const mouseLeave = () => {
+    setDropdownToggle(false);
   };
 
   return (
@@ -28,11 +32,13 @@ const Navigation = () => {
           <Link className="nav-link" to="/">
             Home
           </Link>
-          <span className="nav-link nav-dropdown-container">
-            <div onClick={handleDropdownToggle}>
-              Shopping
-              {dropdownToggle && <NavDropDown />}
-            </div>
+          <span
+            className="nav-link nav-dropdown-container"
+            onMouseEnter={mouseOn}
+            onMouseLeave={mouseLeave}
+          >
+            <span className="nav-shopping">Shopping</span>
+            {dropdownToggle && <NavDropDown toggle={dropdownToggle} />}
           </span>
           <Link className="nav-link" to="/aboutus">
             About Us
