@@ -5,8 +5,12 @@
   z-index: 5;
   background-color: white;
   top: 45px;
+  padding: 15px;
 
   .dropdown-link {
     padding: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/plant-flower-outline-svgrepo-com.svg";
 import CartIcon from "../cart/cart-icon.component";
@@ -13,20 +13,34 @@ const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { cartToggle } = useContext(CartContext);
   const [dropdownToggle, setDropdownToggle] = useState(false);
+  const [myAccountToggle, setMyAccountToggle] = useState(false);
+  const [searchToggle, setSearchToggle] = useState(null);
 
-  const mouseOn = () => {
-    setDropdownToggle(true);
+  const categoryMouseMove = () => {
+    setDropdownToggle(!dropdownToggle);
   };
 
-  const mouseLeave = () => {
-    setDropdownToggle(false);
+  const myAccountMouseMove = () => {
+    setMyAccountToggle(!myAccountToggle);
+  };
+
+  const searchMouseOn = () => {
+    setSearchToggle("active");
   };
 
   return (
-    <Fragment>
+    <>
       <div className="nav-link-container">
         <div className="logo-container">
           <Logo />
+        </div>
+        <div className="search-box">
+          <input
+            className={searchToggle}
+            placeholder="search a plant..."
+            autoFocus
+          />
+          <i class="fas fa-search" onMouseOver={searchMouseOn}></i>
         </div>
         <div className="links-container">
           <Link className="nav-link" to="/">
@@ -34,18 +48,42 @@ const Navigation = () => {
           </Link>
           <span
             className="nav-link nav-dropdown-container"
-            onMouseEnter={mouseOn}
-            onMouseLeave={mouseLeave}
+            onMouseEnter={categoryMouseMove}
+            onMouseLeave={categoryMouseMove}
           >
-            <span className="nav-shopping">Shopping</span>
-            {dropdownToggle && <NavDropDown toggle={dropdownToggle} />}
+            <span className="nav-shopping">Category</span>
+            {dropdownToggle && <NavDropDown />}
           </span>
+          <Link className="nav-link" to="/">
+            Shop All
+          </Link>
           <Link className="nav-link" to="/aboutus">
-            About Us
+            Services
+          </Link>
+          <Link className="nav-link" to="/aboutus">
+            Contact Us
           </Link>
           {currentUser ? (
-            <span className="nav-link auth-button" onClick={signOutUser}>
-              Sign Out
+            <span
+              className="my-account"
+              onMouseEnter={myAccountMouseMove}
+              onMouseLeave={myAccountMouseMove}
+            >
+              <img
+                className="nav-link"
+                src="user-icon.png"
+                alt="account-icon"
+              />
+              {myAccountToggle && (
+                <div className="nav-dropdown account-dropdown">
+                  <span className="dropdown-link">My order</span>
+                  <span className="dropdown-link">My wishlist</span>
+                  <span className="dropdown-link">Settings</span>
+                  <span className="nav-link auth-button" onClick={signOutUser}>
+                    Sign Out
+                  </span>
+                </div>
+              )}
             </span>
           ) : (
             <Link className="nav-link auth-button" to="/signin">
@@ -58,7 +96,7 @@ const Navigation = () => {
         </div>
         {cartToggle && <CartDropDown />}
       </div>
-    </Fragment>
+    </>
   );
 };
 

@@ -4,6 +4,32 @@
   height: 70px;
   margin-bottom: 20px;
   position: relative;
+  margin: 20px;
+
+  .search-box {
+    margin: auto 30px auto 280px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input {
+      height: 40px;
+      width: 280px;
+      border-radius: 5px;
+      transform: scaleX(0);
+    }
+
+    input.active {
+      transform: scaleX(1);
+      transition: transform 0.5s ease;
+    }
+
+    i {
+      font-size: larger;
+      cursor: pointer;
+      padding-left: 10px;
+    }
+  }
 
   .links-container {
     display: flex;
@@ -15,6 +41,13 @@
     cursor: pointer;
     padding: 10px;
     font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &.auth-button {
       border: 1px solid green;
@@ -32,6 +65,33 @@
 
     .nav-shopping {
       cursor: default;
+    }
+  }
+
+  .my-account {
+    position: relative;
+
+    .account-dropdown {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      padding: 15px;
+      width: 150px;
+    }
+
+    .dropdown-link {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .nav-link {
+      text-align: center;
     }
   }
 }
