@@ -16,7 +16,7 @@ const CategoryPreview = () => {
           <div className="main-preview-container">
             <h2>{category}</h2>
             <div className="main-preview">
-              <Products products={items.filter((_, idx) => idx < 4)} />;
+              <Products products={items.filter((_, idx) => idx < 4)} />
             </div>
             <Button buttonType="default">View All</Button>
           </div>
