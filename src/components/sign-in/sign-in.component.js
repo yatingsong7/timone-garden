@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   signInWithGooglePopup,
   signInUserWithEmailAndPassword,
@@ -16,12 +16,14 @@ const initFormFields = {
 const SignIn = () => {
   const [formFields, setFormFields] = useState(initFormFields);
   const { email, password } = formFields;
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       await signInUserWithEmailAndPassword(email, password);
       resetForm();
+      navigate("/")
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
@@ -49,6 +51,7 @@ const SignIn = () => {
     try {
       await signInWithGooglePopup();
       resetForm();
+      navigate("/")
     } catch (error) {
       switch (error.code) {
         case "auth/popup-closed-by-user":
