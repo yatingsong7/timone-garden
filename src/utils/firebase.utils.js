@@ -90,6 +90,15 @@ export const getDocuments = async () => {
   return categoryMap;
 };
 
+export const getItemDoc = async (docName, itemId) => {
+  const docRef = doc(db, "categories", docName);
+  const querySnapshot = await getDoc(docRef);
+  const { items } = querySnapshot.data();
+  const item = items.find((item) => item.id.toString() === itemId);
+
+  return item;
+};
+
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await createUserWithEmailAndPassword(auth, email, password);
