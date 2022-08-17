@@ -31,9 +31,8 @@ const Navigation = () => {
   return (
     <>
       <div className="nav-link-container">
-        <div className="logo-container">
-          <Logo />
-        </div>
+        <h1 className="logo">TIMONE GARDEN</h1>
+
         <div className="search-box">
           <input
             className={searchToggle}
@@ -54,9 +53,6 @@ const Navigation = () => {
             <span className="nav-shopping">Category</span>
             {dropdownToggle && <NavDropDown />}
           </span>
-          <Link className="nav-link" to="/">
-            Shop All
-          </Link>
           <Link className="nav-link" to="/aboutus">
             Services
           </Link>

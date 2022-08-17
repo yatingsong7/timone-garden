@@ -3,11 +3,14 @@ import "./directory.style.scss";
 
 const Directory = ({ category }) => {
   return (
-    <div className="directory-container">
-      {category.map((category) => {
-        return <Category key={category.id} category={category} />;
-      })}
-    </div>
+    <>
+      <h1 className="category-title">Our category</h1>
+      <div className="directory-container">
+        {category.map((category) => {
+          return <Category key={category.id} category={category} />;
+        })}
+      </div>
+    </>
   );
 };
 export default Directory;

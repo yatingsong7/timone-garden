@@ -1,8 +1,13 @@
 .preview-container {
+  margin-top: 40px;
   text-align: center;
 
   .main-preview-container {
     margin-top: 40px;
+
+    h2 {
+      text-transform: capitalize;
+    }
 
     .main-preview {
       display: grid;

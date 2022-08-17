@@ -1,0 +1,26 @@
+.jumbotron-container {
+  width: 100%;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    font-size: 80px;
+    left: 22%;
+    color: aliceblue;
+
+    p {
+      font-size: 40px;
+      color: aliceblue;
+    }
+  }
+
+  Button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    margin: 25px auto;
+  }
+}

@@ -3,6 +3,7 @@ import "./button.style.scss";
 export const BUTTON_TYPE = {
   google: "google-sign-in",
   default: "default",
+  shopAll: "shop-all",
 };
 
 const Button = ({ children, buttonType, ...otherProps }) => {

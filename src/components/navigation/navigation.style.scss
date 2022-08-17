@@ -1,21 +1,24 @@
 .nav-link-container {
   display: flex;
   justify-content: space-between;
-  height: 70px;
-  margin-bottom: 20px;
+  height: 10vh;
   position: relative;
-  margin: 20px;
+  margin: 0 20px;
 
+  .logo {
+    display: flex;
+    align-items: center;
+  }
   .search-box {
-    margin: auto 30px auto 280px;
+    margin: auto 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
 
     input {
       height: 40px;
-      width: 280px;
-      border-radius: 5px;
+      width: 300px;
+      border-radius: 15px;
       transform: scaleX(0);
     }
 
@@ -47,14 +50,15 @@
 
     &:hover {
       text-decoration: underline;
+      color: #4e944f;
     }
 
     &.auth-button {
-      border: 1px solid green;
+      border: 1px solid #4e944f;
       padding: 10px;
 
       &:hover {
-        background-color: green;
+        background-color: #4e944f;
         color: white;
       }
     }
@@ -87,6 +91,7 @@
 
       &:hover {
         text-decoration: underline;
+        color: #4e944f;
       }
     }
 

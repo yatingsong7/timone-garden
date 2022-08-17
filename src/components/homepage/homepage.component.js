@@ -1,6 +1,7 @@
 import "../../App.css";
 import Directory from "../directory/directory.component";
 import CategoryPreview from "../category-preview/category-preview.component";
+import Jumbotron from "../jumbotron/jumbotron.component";
 
 const Homepage = () => {
   const category = [
@@ -43,6 +44,7 @@ const Homepage = () => {
 
   return (
     <div>
+      <Jumbotron />
       <Directory category={category} />
       <CategoryPreview />
     </div>
