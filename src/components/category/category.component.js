@@ -5,7 +5,7 @@ const Category = ({ category }) => {
   const navigate = useNavigate();
 
   const handleShopNowClick = () => {
-    navigate(`/items/${category.title}`);
+    navigate(`/items/${category.title.toLowerCase()}`);
   };
 
   return (

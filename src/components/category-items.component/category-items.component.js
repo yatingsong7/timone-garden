@@ -10,7 +10,9 @@ const CategoryItems = () => {
 
   return (
     <div className="products-container">
-      {categories[title] && <Products products={categories[title]} />}
+      {categories[title] && (
+        <Products products={categories[title]} title={title} />
+      )}
     </div>
   );
 };

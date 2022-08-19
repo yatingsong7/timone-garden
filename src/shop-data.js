@@ -1,236 +1,201 @@
 const SHOP_DATA = [
   {
-    title: "Hats",
+    title: "Indoor plants",
     items: [
       {
         id: 1,
-        name: "Brown Brim",
-        imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+        name: "monstera deliciosa",
+        imageUrl:
+          "https://images.unsplash.com/photo-1604907899106-bdbf31469ae9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
         price: 25,
       },
       {
         id: 2,
-        name: "Blue Beanie",
-        imageUrl: "https://i.ibb.co/ypkgK0X/blue-beanie.png",
-        price: 18,
+        name: "peacock plant",
+        imageUrl:
+          "https://images.unsplash.com/photo-1597306200021-f8e16b12fb45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        price: 20,
       },
       {
         id: 3,
-        name: "Brown Cowboy",
-        imageUrl: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+        name: "fiddle leaf fig",
+        imageUrl:
+          "https://images.unsplash.com/photo-1545239705-1564e58b9e4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
         price: 35,
       },
       {
         id: 4,
-        name: "Grey Brim",
-        imageUrl: "https://i.ibb.co/RjBLWxB/grey-brim.png",
-        price: 25,
+        name: "sansevieria cylindrica",
+        imageUrl:
+          "https://images.unsplash.com/photo-1646667687331-e06974a7fda2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        price: 50,
       },
       {
         id: 5,
-        name: "Green Beanie",
-        imageUrl: "https://i.ibb.co/YTjW3vF/green-beanie.png",
+        name: "peace lily",
+        imageUrl:
+          "https://images.unsplash.com/photo-1620311497344-bce841c9c060?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
         price: 18,
       },
       {
         id: 6,
-        name: "Palm Tree Cap",
-        imageUrl: "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
-        price: 14,
-      },
-      {
-        id: 7,
-        name: "Red Beanie",
-        imageUrl: "https://i.ibb.co/bLB646Z/red-beanie.png",
+        name: "alocasia zebrina",
+        imageUrl:
+          "https://images.unsplash.com/photo-1655382355596-7bf7012a92f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
         price: 18,
       },
       {
+        id: 7,
+        name: "alocasia black velvet",
+        imageUrl:
+          "https://images.unsplash.com/photo-1632320209415-a6b634ccaede?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YWxvY2FzaWElMjBibGFjayUyMHZlbHZldHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60",
+        price: 40,
+      },
+      {
         id: 8,
-        name: "Wolf Cap",
-        imageUrl: "https://i.ibb.co/1f2nWMM/wolf-cap.png",
-        price: 14,
+        name: "aglaonema kiwi",
+        imageUrl:
+          "https://images.unsplash.com/photo-1659100056606-f745ce8cd83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        price: 45,
       },
       {
         id: 9,
-        name: "Blue Snapback",
-        imageUrl: "https://i.ibb.co/X2VJP2W/blue-snapback.png",
-        price: 16,
+        name: "aglaonema jungle red",
+        imageUrl:
+          "https://images.unsplash.com/photo-1658309833607-4de9956d0bbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        price: 30,
       },
     ],
   },
   {
-    title: "Sneakers",
+    title: "Succulents & Cacti",
     items: [
       {
         id: 10,
-        name: "Adidas NMD",
-        imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
-        price: 220,
+        name: "succulent in cement mixture pot",
+        imageUrl:
+          "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+        price: 22,
       },
       {
         id: 11,
-        name: "Adidas Yeezy",
-        imageUrl: "https://i.ibb.co/dJbG1cT/yeezy.png",
-        price: 280,
+        name: "succulent pack",
+        imageUrl:
+          "https://images.unsplash.com/photo-1620955206264-a5b902a907fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
+        price: 18,
       },
       {
         id: 12,
-        name: "Black Converse",
-        imageUrl: "https://i.ibb.co/bPmVXyP/black-converse.png",
+        name: "kaya cactus",
+        imageUrl:
+          "https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=413&q=80",
         price: 110,
       },
       {
         id: 13,
-        name: "Nike White AirForce",
-        imageUrl: "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
-        price: 160,
+        name: "assorted succulent",
+        imageUrl:
+          "https://images.unsplash.com/photo-1623667596999-48a96b93c3e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+        price: 20,
       },
       {
         id: 14,
-        name: "Nike Red High Tops",
-        imageUrl: "https://i.ibb.co/QcvzydB/nikes-red.png",
-        price: 160,
+        name: "small succulents in pots",
+        imageUrl:
+          "https://images.unsplash.com/photo-1548587449-2c1dcd68cecd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=403&q=80",
+        price: 5.85,
       },
       {
         id: 15,
-        name: "Nike Brown High Tops",
-        imageUrl: "https://i.ibb.co/fMTV342/nike-brown.png",
-        price: 160,
+        name: "assorted cactus",
+        imageUrl:
+          "https://images.unsplash.com/photo-1519336056116-bc0f1771dec8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        price: 18,
       },
       {
         id: 16,
-        name: "Air Jordan Limited",
-        imageUrl: "https://i.ibb.co/w4k6Ws9/nike-funky.png",
-        price: 190,
+        name: "small succulent in pot",
+        imageUrl:
+          "https://images.unsplash.com/photo-1636035539163-6589e1331c5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        price: 7.99,
       },
+    ],
+  },
+  {
+    title: "Orchids",
+    items: [
       {
         id: 17,
-        name: "Timberlands",
-        imageUrl: "https://i.ibb.co/Mhh6wBg/timberlands.png",
-        price: 200,
-      },
-    ],
-  },
-  {
-    title: "Jackets",
-    items: [
-      {
-        id: 18,
-        name: "Black Jean Shearling",
-        imageUrl: "https://i.ibb.co/XzcwL5s/black-shearling.png",
-        price: 125,
-      },
-      {
-        id: 19,
-        name: "Blue Jean Jacket",
-        imageUrl: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
-        price: 90,
-      },
-      {
-        id: 20,
-        name: "Grey Jean Jacket",
-        imageUrl: "https://i.ibb.co/N71k1ML/grey-jean-jacket.png",
-        price: 90,
-      },
-      {
-        id: 21,
-        name: "Brown Shearling",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 165,
-      },
-      {
-        id: 22,
-        name: "Tan Trench",
-        imageUrl: "https://i.ibb.co/M6hHc3F/brown-trench.png",
-        price: 185,
-      },
-    ],
-  },
-  {
-    title: "Womens",
-    items: [
-      {
-        id: 23,
-        name: "Blue Tanktop",
-        imageUrl: "https://i.ibb.co/7CQVJNm/blue-tank.png",
-        price: 25,
-      },
-      {
-        id: 24,
-        name: "Floral Blouse",
-        imageUrl: "https://i.ibb.co/4W2DGKm/floral-blouse.png",
-        price: 20,
-      },
-      {
-        id: 25,
-        name: "Floral Dress",
-        imageUrl: "https://i.ibb.co/KV18Ysr/floral-skirt.png",
-        price: 80,
-      },
-      {
-        id: 26,
-        name: "Red Dots Dress",
-        imageUrl: "https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png",
-        price: 80,
-      },
-      {
-        id: 27,
-        name: "Striped Sweater",
-        imageUrl: "https://i.ibb.co/KmSkMbH/striped-sweater.png",
-        price: 45,
-      },
-      {
-        id: 28,
-        name: "Yellow Track Suit",
-        imageUrl: "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
-        price: 135,
-      },
-      {
-        id: 29,
-        name: "White Blouse",
-        imageUrl: "https://i.ibb.co/qBcrsJg/white-vest.png",
-        price: 20,
-      },
-    ],
-  },
-  {
-    title: "Mens",
-    items: [
-      {
-        id: 30,
-        name: "Camo Down Vest",
-        imageUrl: "https://i.ibb.co/xJS0T3Y/camo-vest.png",
-        price: 325,
-      },
-      {
-        id: 31,
-        name: "Floral T-shirt",
-        imageUrl: "https://i.ibb.co/qMQ75QZ/floral-shirt.png",
-        price: 20,
-      },
-      {
-        id: 32,
-        name: "Black & White Longsleeve",
-        imageUrl: "https://i.ibb.co/55z32tw/long-sleeve.png",
-        price: 25,
-      },
-      {
-        id: 33,
-        name: "Pink T-shirt",
-        imageUrl: "https://i.ibb.co/RvwnBL8/pink-shirt.png",
-        price: 25,
-      },
-      {
-        id: 34,
-        name: "Jean Long Sleeve",
-        imageUrl: "https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png",
+        name: "orchid white",
+        imageUrl:
+          "https://images.unsplash.com/photo-1583846712268-a77d97b7fd68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
         price: 40,
       },
       {
-        id: 35,
-        name: "Burgundy T-shirt",
-        imageUrl: "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
+        id: 18,
+        name: "orchid pink",
+        imageUrl:
+          "https://images.unsplash.com/photo-1615703771490-5d6cb8c1071a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        price: 60,
+      },
+      {
+        id: 19,
+        name: "orchid purple",
+        imageUrl:
+          "https://images.unsplash.com/photo-1593513061107-be87d9ea19b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=392&q=80",
+        price: 60,
+      },
+    ],
+  },
+  {
+    title: "Pots and planters",
+    items: [
+      {
+        id: 20,
+        name: "white plastic pot -- 130MM",
+        imageUrl:
+          "https://images.unsplash.com/photo-1609062111394-0427aa22d6c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=451&q=80",
+        price: 10,
+      },
+      {
+        id: 21,
+        name: "ceramic pot",
+        imageUrl:
+          "https://images.unsplash.com/photo-1597055181187-1f9b726e2d66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        price: 10,
+      },
+      {
+        id: 22,
+        name: "decorated pots",
+        imageUrl:
+          "https://images.unsplash.com/photo-1604759280982-6f84e05a27bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80",
+        price: 8.99,
+      },
+      {
+        id: 23,
+        name: "hanging plastic pots",
+        imageUrl:
+          "https://images.unsplash.com/photo-1623804102454-9acfeaadc811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
         price: 25,
+      },
+    ],
+  },
+  {
+    title: "Garden tools",
+    items: [
+      {
+        id: 24,
+        name: "hand trowels",
+        imageUrl:
+          "https://images.unsplash.com/photo-1598851418241-f52c34b6e4c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        price: 6.99,
+      },
+      {
+        id: 25,
+        name: "watering can",
+        imageUrl:
+          "https://images.unsplash.com/photo-1626047876082-9a54bf80daa3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        price: 15,
       },
     ],
   },

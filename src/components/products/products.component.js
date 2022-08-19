@@ -1,9 +1,8 @@
-import Button from "../button/button.component";
 import "./products.style.scss";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Products = ({ products }) => {
-  const { title } = useParams();
+const Products = ({ products, title }) => {
+  // const { title } = useParams();
   const navigate = useNavigate();
 
   return (

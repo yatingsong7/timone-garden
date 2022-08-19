@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ProductsContext } from "../../context/products.context";
 import "./nav-drowdown.style.scss";
