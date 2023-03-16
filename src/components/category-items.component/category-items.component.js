@@ -11,17 +11,12 @@ const CategoryItems = () => {
   return (
     <div className="shop-category-container">
       <h1 className="category-header">{title}</h1>
-      <input />
-      {categories[title] && (
-        <span className="products-total">
-          {categories[title].length} products
-        </span>
-      )}
+      <div className="products-main">
+        {categories[title] && <span className="products-total">{categories[title].length} products</span>}
 
-      <div className="products-container">
-        {categories[title] && (
-          <Products products={categories[title]} title={title} />
-        )}
+        <div className="products-container">
+          {categories[title] && <Products products={categories[title]} title={title} />}
+        </div>
       </div>
     </div>
   );

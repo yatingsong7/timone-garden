@@ -18,33 +18,30 @@ const ItemView = () => {
   }, [id, title]);
 
   return (
-    <div>
-      {item && (
-        <div className="item-container">
-          <div className="item-description-container">
-            <img src={item.imageUrl} alt="img" />
+    item && (
+      <div className="item-container">
+        <div className="item-description-container">
+          <img src={item.imageUrl} alt="img" height="600px" width="400px" />
 
-            <div className="item-description">
-              <h1>{item.name}</h1>
-              <h4>price: ${item.price}</h4>
-              <p>Description:</p>
-              <p>delivery: </p>
-              <Button
-                buttonType="default"
-                onClick={() => {
-                  addCartItems(item);
-                }}
-              >
-                Add to Cart
-              </Button>
-            </div>
-          </div>
-          <div className="item-review-container">
-            <h2>Review</h2>
+          <div className="item-description">
+            <h1>{item.name}</h1>
+            <h4>price: ${item.price}</h4>
+            <p>Description:</p>
+            <p>delivery: </p>
+            <Button
+              buttonType="default"
+              onClick={() => {
+                addCartItems(item);
+              }}>
+              Add to Cart
+            </Button>
           </div>
         </div>
-      )}
-    </div>
+        <div className="item-review-container">
+          <h2>Review</h2>
+        </div>
+      </div>
+    )
   );
 };
 

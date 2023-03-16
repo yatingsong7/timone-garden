@@ -1,5 +1,13 @@
 .shop-category-container {
   margin: auto 12%;
+  min-height: 70vh;
+
+  .products-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .products-container {
     display: grid;

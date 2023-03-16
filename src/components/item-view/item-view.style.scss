@@ -1,13 +1,31 @@
 .item-container {
   margin: 20px;
+  min-height: 80vh;
 
   .item-description-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 
     h1 {
       text-transform: uppercase;
+    }
+
+    .item-description {
+      margin-left: 200px;
+      font-size: 24px;
+    }
+  }
+
+  .item-review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    h2 {
+      font-size: 30px;
     }
   }
 }
