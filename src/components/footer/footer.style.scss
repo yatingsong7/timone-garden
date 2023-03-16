@@ -2,8 +2,9 @@
   background-color: #83bd75;
   color: white;
   text-align: center;
-  min-height: 300px;
-  position: relative;
+  height: 300px;
+  position: absolute;
+  width: 100%;
 
   .contact-us {
     padding: 50px;
@@ -11,7 +12,6 @@
   }
 
   .copyright {
-    position: absolute;
     bottom: 5px;
     padding: 0 45%;
   }

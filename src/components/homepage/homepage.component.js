@@ -38,7 +38,7 @@ const Homepage = () => {
   ];
 
   return (
-    <div>
+    <div style={{ minHeight: "100vh", paddingBottom: "350px" }}>
       <Jumbotron />
       <Directory category={category} />
       <CategoryPreview />

@@ -34,11 +34,7 @@ const Navigation = () => {
         <h1 className="logo">TIMONE GARDEN</h1>
 
         <div className="search-box">
-          <input
-            className={searchToggle}
-            placeholder="search a plant..."
-            autoFocus
-          />
+          <input className={searchToggle} placeholder="search a plant..." autoFocus />
           <i class="fas fa-search" onMouseOver={searchMouseOn}></i>
         </div>
         <div className="links-container">
@@ -48,28 +44,19 @@ const Navigation = () => {
           <span
             className="nav-link nav-dropdown-container"
             onMouseEnter={categoryMouseMove}
-            onMouseLeave={categoryMouseMove}
-          >
+            onMouseLeave={categoryMouseMove}>
             <span className="nav-shopping">Category</span>
             {dropdownToggle && <NavDropDown />}
           </span>
-          <Link className="nav-link" to="/aboutus">
+          {/* <Link className="nav-link" to="/aboutus">
             Services
-          </Link>
+          </Link> */}
           <Link className="nav-link" to="/aboutus">
             Contact Us
           </Link>
           {currentUser ? (
-            <span
-              className="my-account"
-              onMouseEnter={myAccountMouseMove}
-              onMouseLeave={myAccountMouseMove}
-            >
-              <img
-                className="nav-link"
-                src="user-icon.png"
-                alt="account-icon"
-              />
+            <span className="my-account" onMouseEnter={myAccountMouseMove} onMouseLeave={myAccountMouseMove}>
+              <img className="nav-link" src="user-icon.png" alt="account-icon" />
               {myAccountToggle && (
                 <div className="nav-dropdown account-dropdown">
                   <span className="dropdown-link">My order</span>
