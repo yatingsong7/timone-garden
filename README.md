@@ -27,15 +27,21 @@ An two-layer online shopping web application built by **React 18**, **Google Fir
 
 - Clone the repo:
 
-  `$ git clone https://github.com/yatingsong7/timone-garden.git`
+  ```
+  $ git clone https://github.com/yatingsong7/timone-garden.git
+  ```
 
 - Go to the project directory and install packages:
 
-  `$cd timone-garden && npm install`
+  ```
+  $cd timone-garden && npm install
+  ```
 
 - To Start web application, go to the Front-end folder and run:
 
-  `$ npm start`
+  ```
+  $ npm start
+  ```
 
 This step will automatically open the browser, or if not, go to localhost:3000 in your browser
 
