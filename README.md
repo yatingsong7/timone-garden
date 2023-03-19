@@ -2,6 +2,8 @@
 
 An two-layer online shopping web application built by **React 18**, **Google Firebase Authentication**, **Google Firestore** and **SASS**. React front-end application directly communicates with Cloud Firestore database.
 
+## Demo
+
 ![](.github/assets/garden.png)
 ![](.github/assets/items.png)
 ![](.github/assets/checkout.png)
@@ -24,12 +26,15 @@ An two-layer online shopping web application built by **React 18**, **Google Fir
 ## Installation
 
 - Clone the repo:
+
   `$ git clone https://github.com/yatingsong7/timone-garden.git`
 
-- Go to the project directory and install packages:  
+- Go to the project directory and install packages:
+
   `$cd timone-garden && npm install`
 
 - To Start web application, go to the Front-end folder and run:
+
   `$ npm start`
 
 This step will automatically open the browser, or if not, go to localhost:3000 in your browser
