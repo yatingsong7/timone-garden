@@ -11,8 +11,7 @@ An two-layer online shopping web application built by **React 18**, **Google Fir
 ## Features
 
 - Sign in/Sign out
-- Sign in with Google Account
-- Sign up
+- Sign up by Google Account or by email and password
 - Browse items by categories
 - View one item
 - Add one item to cart
